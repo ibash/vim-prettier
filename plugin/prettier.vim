@@ -162,9 +162,6 @@ command! -nargs=? -range=% PrettierFragment call prettier#Prettier(g:prettier#ex
 command! -nargs=? -range=% PrettierPartial call prettier#Prettier(g:prettier#exec_cmd_async, <line1>, <line2>, 1)
 
 " map command
-if !hasmapto('<Plug>(Prettier)') && maparg('<Leader>p', 'n') ==# ''
-  nmap <unique> <Leader>p <Plug>(Prettier)
-endif
 nnoremap <silent> <Plug>(Prettier) :Prettier<CR>
 nnoremap <silent> <Plug>(PrettierAsync) :PrettierAsync<CR>
 nnoremap <silent> <Plug>(PrettierFragment) :PrettierFragment<CR>
